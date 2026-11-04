@@ -240,6 +240,34 @@ select {
     font-size: 1.3em !important;
 }
 
+/* Dropdown (THEMEN / Kategorie auswählen): visible orange-on-blue scrollbar */
+select,
+select option {
+    background-color: #000060 !important;
+    color: #fcfffb !important;
+}
+
+select {
+    scrollbar-color: #fe870b #1f45ac;
+}
+
+select::-webkit-scrollbar {
+    width: 24px;
+}
+select::-webkit-scrollbar-track {
+    background: #1f45ac;
+    border: 2px solid #fcfffb;
+}
+select::-webkit-scrollbar-thumb {
+    background-color: #fe870b;
+    border: 2px solid #000600;
+}
+select::-webkit-scrollbar-button {
+    background-color: #fe870b;
+    border: 2px solid #000600;
+    height: 24px;
+}
+
 /* Scrollbar (Chrome/WebKit only) */
 ::-webkit-scrollbar {
     width: 24px;
