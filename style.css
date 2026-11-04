@@ -375,3 +375,168 @@ select:is(#cat, #archives-dropdown-2)::picker(select)::-webkit-scrollbar-button:
 ::-webkit-scrollbar-button:single-button:horizontal:increment {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10' shape-rendering='crispEdges'%3E%3Cpath d='M8 5L2 1V9z' fill='%23000600'/%3E%3C/svg%3E");
 }
+
+/* Kalender (My Calendar plugin, widget "Kalender").
+   Palette: black #000600 background, white #fcfffb text,
+   blue #1f45ac and orange #fe870b for highlights. */
+.content-sidebar aside .widget-title {
+    color: #fe870b !important;
+}
+
+.mc-main,
+.mc-event,
+.my-calendar-modal,
+.my-calendar-modal-overlay,
+.mc-event-list {
+    --primary-dark: #000600 !important;
+    --primary-light: #fcfffb !important;
+    --secondary-light: #fcfffb !important;
+    --secondary-dark: #000600 !important;
+    --highlight-dark: #1f45ac !important;
+    --highlight-light: #fcfffb !important;
+    --close-button: #fe870b !important;
+    --search-highlight-bg: #fe870b !important;
+    --main-background: #000600 !important;
+    --main-color: #fcfffb !important;
+    --navbar-background: #000600 !important;
+    --nav-button-bg: #1f45ac !important;
+    --nav-button-color: #fcfffb !important;
+    --nav-button-border: #fcfffb !important;
+    --nav-input-border: #fcfffb !important;
+    --nav-input-background: #000600 !important;
+    --nav-input-color: #fcfffb !important;
+    --grid-cell-border: #fcfffb !important;
+    --grid-header-border: #fcfffb !important;
+    --grid-header-color: #fe870b !important;
+    --grid-weekend-color: #fcfffb !important;
+    --grid-header-bg: #000600 !important;
+    --grid-weekend-bg: #000600 !important;
+    --grid-cell-background: #000600 !important;
+    --current-day-border: #fe870b !important;
+    --current-day-color: #fcfffb !important;
+    --current-day-bg: #1f45ac !important;
+    --date-has-events-bg: #fe870b !important;
+    --date-has-events-color: #000600 !important;
+    --list-preset-border-color: #fcfffb !important;
+    --list-preset-stripe-background: #1f45ac !important;
+    --list-preset-date-badge-background: #fe870b !important;
+    --list-preset-date-badge-color: #000600 !important;
+    --list-preset-background: #000600 !important;
+    --category-mc_general: #1f45ac !important;
+    --category-mc_vzekc-ev-veranstaltungen: #fe870b !important;
+    --category-mc_andere-veranstalter: #1f45ac !important;
+    --category-mc_kostenpflichtig: #fe870b !important;
+}
+
+.mc-main,
+.mc-main .mc-content,
+.mc-main table,
+.mc-main th,
+.mc-main td {
+    background: #000600 !important;
+    color: #fcfffb !important;
+    border-color: #fcfffb !important;
+    font-family: "Amiga Topaz", monospace !important;
+}
+
+.mc-main table {
+    border-collapse: collapse;
+}
+
+.mc-main .heading,
+.mc-main .heading span {
+    background: #000600 !important;
+    color: #fcfffb !important;
+    font-size: 1em !important;
+}
+
+.mc-main th {
+    color: #fe870b !important;
+}
+
+/* days outside the shown month: blue */
+.mc-main td.nextmonth,
+.mc-main td.prevmonth {
+    background: #1f45ac !important;
+}
+
+/* today: blue with orange frame */
+.mc-main td.current-day {
+    background: #1f45ac !important;
+    outline: 2px solid #fe870b;
+    outline-offset: -2px;
+}
+
+/* days with events: orange */
+.mc-main td.has-events,
+.mc-main td.mc-events {
+    background: #fe870b !important;
+    color: #000600 !important;
+}
+
+.mc-main td .mc-date,
+.mc-main td button.mc-date,
+.mc-main td .mc-date span {
+    background: transparent !important;
+    color: inherit !important;
+    font-family: "Amiga Topaz", monospace !important;
+    text-decoration: none;
+}
+
+/* event titles / links: blue, orange on hover */
+.mc-main.mc-main .event-title,
+.mc-main.mc-main .event-title a,
+.mc-main.mc-main .event-title button {
+    background: #1f45ac !important;
+    color: #fcfffb !important;
+}
+.mc-main.mc-main .event-title a:hover,
+.mc-main.mc-main .event-title a:focus,
+.mc-main.mc-main .event-title button:hover,
+.mc-main.mc-main .event-title button:focus {
+    background: #fe870b !important;
+    color: #000600 !important;
+}
+
+/* navigation buttons and inputs */
+.mc-main button:not(.mc-date),
+.mc-main .mc-navigation a,
+.mc-main input,
+.mc-main select {
+    background: #1f45ac !important;
+    color: #fcfffb !important;
+    border: 2px solid #fcfffb !important;
+    font-family: "Amiga Topaz", monospace !important;
+}
+.mc-main button:not(.mc-date):hover,
+.mc-main .mc-navigation a:hover {
+    background: #fe870b !important;
+    color: #000600 !important;
+}
+
+/* event popup (modal) */
+.my-calendar-modal,
+.my-calendar-modal .mc-modal-content,
+.my-calendar-modal .mc-modal-content * {
+    background: #000600 !important;
+    color: #fcfffb !important;
+    border-color: #fcfffb !important;
+    font-family: "Amiga Topaz", monospace !important;
+}
+.my-calendar-modal {
+    border: 2px solid #fcfffb !important;
+}
+.my-calendar-modal.my-calendar-modal.my-calendar-modal #modal-title,
+.my-calendar-modal.my-calendar-modal .mc-modal-title-container,
+.my-calendar-modal.my-calendar-modal .event-title {
+    background: #1f45ac !important;
+    color: #fcfffb !important;
+}
+.my-calendar-modal button.close,
+.my-calendar-modal .mc-modal-close {
+    background: #fe870b !important;
+    color: #000600 !important;
+}
+.my-calendar-modal a {
+    color: #fe870b !important;
+}
