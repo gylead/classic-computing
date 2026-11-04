@@ -472,7 +472,7 @@ select:is(#cat, #archives-dropdown-2)::picker(select)::-webkit-scrollbar-button:
 /* title is plain text (not a menu): no border; the span inherits the heading size */
 .mc-main .heading,
 .mc-main .heading span {
-    background: #1f45ac !important;
+    background: #000600 !important;
     color: #fcfffb !important;
     border: 0 !important;
     outline: 0 !important;
@@ -487,7 +487,10 @@ select:is(#cat, #archives-dropdown-2)::picker(select)::-webkit-scrollbar-button:
     font-size: inherit !important;
 }
 
+.mc-main thead,
+.mc-main thead tr,
 .mc-main th {
+    background: #000600 !important;
     color: #fe870b !important;
 }
 
