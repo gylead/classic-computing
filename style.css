@@ -239,17 +239,17 @@ select {
     font-size: 1.3em !important;
 }
 
-/* Dropdown (THEMEN / Kategorie auswählen): Amiga-style list.
+/* Dropdowns (THEMEN / Kategorie auswählen, Ältere Artikel / Monat auswählen): Amiga-style list.
    Palette: blue #1f45ac, white #fcfffb, orange #fe870b, black #000600.
    appearance: base-select (Chrome 135+) makes the popup stylable DOM,
    so the scrollbar can be themed. Older browsers keep the native popup. */
-select#cat,
-select#cat::picker(select) {
+select:is(#cat, #archives-dropdown-2),
+select:is(#cat, #archives-dropdown-2)::picker(select) {
     appearance: base-select !important;
 }
 
 /* closed dropdown: white on blue */
-select#cat {
+select:is(#cat, #archives-dropdown-2) {
     background: #1f45ac !important;
     color: #fcfffb !important;
     border: 2px solid #fcfffb !important;
@@ -257,52 +257,52 @@ select#cat {
 }
 
 /* open menu: black on white, orange highlight */
-select#cat::picker(select) {
+select:is(#cat, #archives-dropdown-2)::picker(select) {
     background: #fcfffb;
     color: #000600;
     border: 2px solid #000600;
     max-height: 320px;
 }
 
-select#cat option {
+select:is(#cat, #archives-dropdown-2) option {
     background: #fcfffb !important;
     color: #000600 !important;
     padding: 2px 6px;
 }
 
-select#cat option:hover,
-select#cat option:checked {
+select:is(#cat, #archives-dropdown-2) option:hover,
+select:is(#cat, #archives-dropdown-2) option:checked {
     background: #fe870b !important;
     color: #000600 !important;
 }
 
 /* Scrollbar of the open menu: same style as the page scrollbars below */
-select#cat::picker(select)::-webkit-scrollbar {
+select:is(#cat, #archives-dropdown-2)::picker(select)::-webkit-scrollbar {
     width: 24px;
     height: 24px;
 }
-select#cat::picker(select)::-webkit-scrollbar-track:vertical {
+select:is(#cat, #archives-dropdown-2)::picker(select)::-webkit-scrollbar-track:vertical {
     background: linear-gradient(to right, #fcfffb 0 2px, #1f45ac 2px calc(100% - 2px), #fcfffb calc(100% - 2px));
 }
-select#cat::picker(select)::-webkit-scrollbar-track:horizontal {
+select:is(#cat, #archives-dropdown-2)::picker(select)::-webkit-scrollbar-track:horizontal {
     background: linear-gradient(to bottom, #fcfffb 0 2px, #1f45ac 2px calc(100% - 2px), #fcfffb calc(100% - 2px));
 }
-select#cat::picker(select)::-webkit-scrollbar-thumb:vertical {
+select:is(#cat, #archives-dropdown-2)::picker(select)::-webkit-scrollbar-thumb:vertical {
     background: linear-gradient(to right, #fcfffb 0 2px, #1f45ac 2px 5px, #fcfffb 5px calc(100% - 5px), #1f45ac calc(100% - 5px) calc(100% - 2px), #fcfffb calc(100% - 2px));
     background-clip: padding-box;
     border: solid transparent;
     border-width: 3px 0;
 }
-select#cat::picker(select)::-webkit-scrollbar-thumb:horizontal {
+select:is(#cat, #archives-dropdown-2)::picker(select)::-webkit-scrollbar-thumb:horizontal {
     background: linear-gradient(to bottom, #fcfffb 0 2px, #1f45ac 2px 5px, #fcfffb 5px calc(100% - 5px), #1f45ac calc(100% - 5px) calc(100% - 2px), #fcfffb calc(100% - 2px));
     background-clip: padding-box;
     border: solid transparent;
     border-width: 0 3px;
 }
-select#cat::picker(select)::-webkit-scrollbar-corner {
+select:is(#cat, #archives-dropdown-2)::picker(select)::-webkit-scrollbar-corner {
     background: #1f45ac;
 }
-select#cat::picker(select)::-webkit-scrollbar-button:single-button {
+select:is(#cat, #archives-dropdown-2)::picker(select)::-webkit-scrollbar-button:single-button {
     display: block;
     width: 24px;
     height: 24px;
@@ -312,16 +312,16 @@ select#cat::picker(select)::-webkit-scrollbar-button:single-button {
     background-size: 16px 16px;
     border: 2px solid #fcfffb;
 }
-select#cat::picker(select)::-webkit-scrollbar-button:single-button:vertical:decrement {
+select:is(#cat, #archives-dropdown-2)::picker(select)::-webkit-scrollbar-button:single-button:vertical:decrement {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10' shape-rendering='crispEdges'%3E%3Cpath d='M5 2L9 8H1z' fill='%23000600'/%3E%3C/svg%3E");
 }
-select#cat::picker(select)::-webkit-scrollbar-button:single-button:vertical:increment {
+select:is(#cat, #archives-dropdown-2)::picker(select)::-webkit-scrollbar-button:single-button:vertical:increment {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10' shape-rendering='crispEdges'%3E%3Cpath d='M5 8L9 2H1z' fill='%23000600'/%3E%3C/svg%3E");
 }
-select#cat::picker(select)::-webkit-scrollbar-button:single-button:horizontal:decrement {
+select:is(#cat, #archives-dropdown-2)::picker(select)::-webkit-scrollbar-button:single-button:horizontal:decrement {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10' shape-rendering='crispEdges'%3E%3Cpath d='M2 5L8 1V9z' fill='%23000600'/%3E%3C/svg%3E");
 }
-select#cat::picker(select)::-webkit-scrollbar-button:single-button:horizontal:increment {
+select:is(#cat, #archives-dropdown-2)::picker(select)::-webkit-scrollbar-button:single-button:horizontal:increment {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10' shape-rendering='crispEdges'%3E%3Cpath d='M8 5L2 1V9z' fill='%23000600'/%3E%3C/svg%3E");
 }
 
