@@ -239,7 +239,8 @@ select {
     font-size: 1.3em !important;
 }
 
-/* Dropdown (THEMEN / Kategorie auswählen): Amiga-style orange-on-blue list.
+/* Dropdown (THEMEN / Kategorie auswählen): Amiga-style list.
+   Palette: blue #1f45ac, white #fcfffb, orange #fe870b, black #000600.
    appearance: base-select (Chrome 135+) makes the popup stylable DOM,
    so the scrollbar can be themed. Older browsers keep the native popup. */
 select#cat,
@@ -247,23 +248,25 @@ select#cat::picker(select) {
     appearance: base-select !important;
 }
 
+/* closed dropdown: white on blue */
 select#cat {
-    background: #000060 !important;
+    background: #1f45ac !important;
     color: #fcfffb !important;
     border: 2px solid #fcfffb !important;
     padding: 6px !important;
 }
 
+/* open menu: black on white, orange highlight */
 select#cat::picker(select) {
-    background: #000060;
-    color: #fcfffb;
-    border: 2px solid #fcfffb;
+    background: #fcfffb;
+    color: #000600;
+    border: 2px solid #000600;
     max-height: 320px;
 }
 
 select#cat option {
-    background: #000060 !important;
-    color: #fcfffb !important;
+    background: #fcfffb !important;
+    color: #000600 !important;
     padding: 2px 6px;
 }
 
@@ -278,7 +281,7 @@ select#cat::picker(select)::-webkit-scrollbar {
 }
 select#cat::picker(select)::-webkit-scrollbar-track {
     background: #1f45ac;
-    border: 2px solid #fcfffb;
+    border: 2px solid #000600;
 }
 select#cat::picker(select)::-webkit-scrollbar-thumb {
     background: #fe870b;
@@ -295,10 +298,10 @@ select#cat::picker(select)::-webkit-scrollbar-button {
     width: 24px;
 }
 select#cat::picker(select)::-webkit-scrollbar-button:single-button:vertical:decrement {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10' shape-rendering='crispEdges'%3E%3Cpath d='M5 2L9 8H1z' fill='black'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10' shape-rendering='crispEdges'%3E%3Cpath d='M5 2L9 8H1z' fill='%23000600'/%3E%3C/svg%3E");
 }
 select#cat::picker(select)::-webkit-scrollbar-button:single-button:vertical:increment {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10' shape-rendering='crispEdges'%3E%3Cpath d='M5 8L9 2H1z' fill='black'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10' shape-rendering='crispEdges'%3E%3Cpath d='M5 8L9 2H1z' fill='%23000600'/%3E%3C/svg%3E");
 }
 
 /* Scrollbar (Chrome/WebKit only) */
