@@ -239,6 +239,57 @@ select {
     font-size: 1.3em !important;
 }
 
+/* Dropdown (THEMEN / Kategorie auswählen): Amiga-style orange-on-blue list.
+   appearance: base-select (Chrome 135+) makes the popup stylable DOM,
+   so the scrollbar can be themed. Older browsers keep the native popup. */
+select#cat,
+select#cat::picker(select) {
+    appearance: base-select !important;
+}
+
+select#cat {
+    background: #000060 !important;
+    color: #fcfffb !important;
+    border: 2px solid #fcfffb !important;
+    padding: 6px !important;
+}
+
+select#cat::picker(select) {
+    background: #000060;
+    color: #fcfffb;
+    border: 2px solid #fcfffb;
+    max-height: 320px;
+}
+
+select#cat option {
+    background: #000060 !important;
+    color: #fcfffb !important;
+    padding: 2px 6px;
+}
+
+select#cat option:hover,
+select#cat option:checked {
+    background: #fe870b !important;
+    color: #000600 !important;
+}
+
+select#cat::picker(select)::-webkit-scrollbar {
+    width: 24px;
+}
+select#cat::picker(select)::-webkit-scrollbar-track {
+    background: #1f45ac;
+    border: 2px solid #fcfffb;
+}
+select#cat::picker(select)::-webkit-scrollbar-thumb {
+    background: #fe870b;
+    border: 2px solid #000600;
+}
+select#cat::picker(select)::-webkit-scrollbar-button {
+    background: #fe870b;
+    border: 2px solid #000600;
+    height: 24px;
+}
+
 /* Scrollbar (Chrome/WebKit only) */
 ::-webkit-scrollbar {
     width: 24px;
