@@ -284,10 +284,21 @@ select#cat::picker(select)::-webkit-scrollbar-thumb {
     background: #fe870b;
     border: 2px solid #000600;
 }
+/* White arrow buttons with a black arrow */
 select#cat::picker(select)::-webkit-scrollbar-button {
-    background: #fe870b;
+    background-color: #fcfffb;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px 16px;
     border: 2px solid #000600;
     height: 24px;
+    width: 24px;
+}
+select#cat::picker(select)::-webkit-scrollbar-button:single-button:vertical:decrement {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10' shape-rendering='crispEdges'%3E%3Cpath d='M5 2L9 8H1z' fill='black'/%3E%3C/svg%3E");
+}
+select#cat::picker(select)::-webkit-scrollbar-button:single-button:vertical:increment {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10' shape-rendering='crispEdges'%3E%3Cpath d='M5 8L9 2H1z' fill='black'/%3E%3C/svg%3E");
 }
 
 /* Scrollbar (Chrome/WebKit only) */
