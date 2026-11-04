@@ -460,18 +460,19 @@ select:is(#cat, #archives-dropdown-2)::picker(select)::-webkit-scrollbar-button:
     background: #1f45ac !important;
 }
 
-/* today: blue with orange frame */
-.mc-main td.current-day {
-    background: #1f45ac !important;
-    outline: 2px solid #fe870b;
-    outline-offset: -2px;
-}
-
 /* days with events: orange */
 .mc-main td.has-events,
 .mc-main td.mc-events {
     background: #fe870b !important;
     color: #000600 !important;
+}
+
+/* today (also when it has events): blue with orange frame, after the rule above */
+.mc-main td.current-day {
+    background: #1f45ac !important;
+    color: #fcfffb !important;
+    outline: 2px solid #fe870b;
+    outline-offset: -2px;
 }
 
 .mc-main td .mc-date,
