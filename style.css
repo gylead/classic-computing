@@ -639,4 +639,5 @@ select:is(#cat, #archives-dropdown-2)::picker(select)::-webkit-scrollbar-button:
 }
 #meta-2 .widget-title {
     margin-top: 0;
+    font-size: 19.6px !important; /* same size as the other orange box titles */
 }
