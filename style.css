@@ -1,0 +1,255 @@
+@-moz-document domain("classic-computing.de") {
+/* Ziel: Absatzabstand in Beiträgen erhöhen */
+.messageText p {
+    margin-top: 0em !important;
+    margin-bottom: 0.5em !important;
+    line-height: 1.5 !important;
+}
+
+/* ==UserStyle==
+@name         AmigaOS 1.x Theme for classic-computing.de
+@namespace    userstyles
+@version      1.0.1
+@description  Retro Amiga 1.x UI styling
+@match        *://www.classic-computing.de/*
+==/UserStyle== */
+@font-face {
+    font-family: 'Amiga Topaz';
+    src: url('https://gylead.github.io/images/classic-computing.de/amiga-topaz.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body,
+html {
+    background-color: #1f45ac !important;
+    /* color: #fcfffb !important; */
+    font-family: "Amiga Topaz", monospace !important;
+    /* margin: 0; */
+    /* padding: 0; */
+}
+
+a {
+    /* color: #fe870b !important; */
+    /* text-decoration: none !important; */
+    /* font-weight: bold; */
+}
+
+a:hover {
+    text-decoration: underline !important;
+}
+
+.entry-title,
+.entry-content {
+    background-color: #1f45ac !important;
+    color: #fcfffb !important;
+}
+
+/* Headers as window title bars */
+h1,
+h2,
+h3,
+#site-title,
+.page-title {
+    /* background-color: #1f45ac !important; */
+    /* color: #fcfffb !important; */
+    /* border: 0px solid #fcfffb; */
+    /* padding: 4px 8px; */
+    /* margin-top: 16px; */
+    /* margin-bottom: 8px; */
+    /* font-size: 1.2em; */
+}
+
+.page {
+    margin: 40px;
+}
+
+#site-header img {
+    content: url("https://gylead.github.io/images/classic-computing.de/header.png");
+    margin-bottom: 8px;
+}
+
+#primary,
+.entry-header,
+#secondary,
+#main,
+#main-content,
+#main.site-main,
+.hfeed.site,
+#page::before {
+    background-color: #1f45ac !important;
+    color: #fcfffb !important;
+}
+
+p.contentHeaderDescription {
+    /* color: #fcfffb !important; */
+}
+
+.wbbBoardNodeList {
+    /* background-color: #1f45ac !important; */
+    /* border: 1px solid #fcfffb; */
+}
+
+.wbbBoardNode {
+    /* background-color: #1f45ac !important; */
+    /* border: 0px solid #fcfffb; */
+    /* padding: 0px; */
+    /* margin: 0px; */
+}
+
+.wbbBoardNodeContainer__description {
+    /* color: #fcfffb; */
+}
+
+.box {
+    /* background-color: #1f45ac !important; */
+}
+
+a.userLink span,
+.separatorLeft {
+    /* color: #fcfffb !important; */
+}
+
+/* Sidebar / widgets */
+.widget,
+.sidebar,
+aside {
+    /* background-color: #1f45ac !important; */
+    /* color: #fcfffb !important; */
+    /* border: 2px solid #fcfffb; */
+    /* padding: 10px; */
+    /* margin-bottom: 16px; */
+}
+
+/* Buttons */
+button,
+input[type="submit"],
+.button {
+    /* background-color: #1f45ac !important; */
+    /* color: #fcfffb !important; */
+    /* border: 2px outset #fcfffb; */
+    /* padding: 6px 10px; */
+    /* font-weight: bold; */
+}
+button:hover,
+input[type="submit"]:hover {
+    /* background-color: #fe870b !important; */
+    /* color: #000600 !important; */
+}
+
+/* Navigation bar */
+nav,
+.menu,
+.main-navigation {
+    background-color: #000600 !important;
+    /* border: 2px solid #fcfffb; */
+}
+
+nav a,
+.menu a {
+    color: #fcfffb !important;
+    font-size: 1.3em
+}
+
+.sub-menu {
+    background-color: #fcfffb !important;
+    color: #000600 !important;
+    border: 2px solid #000600;
+    transform: translate(-4px, -2px);
+}
+
+.sub-menu .menu-item a {
+    color: #000600 !important;
+}
+
+#menu-hauptmenu {
+    border: 2px solid #fcfffb;
+}
+
+.content-sidebar aside {
+    background-color: #000600 !important;
+    color: #fcfffb !important;
+    border: 2px solid #fcfffb !important;
+    padding: 4px;
+}
+
+.content-sidebar aside h1 {
+    color: #fe870b !important;
+    font-size: 1.4em !important;
+}
+
+.content-sidebar aside span {
+    color: #fcfffb !important;
+}
+
+.content-sidebar aside .comment-author-link {
+    color: #fe870b !important;
+}
+
+#meta-2 .widget-title {
+    color: #fe870b !important;
+    font-size: 1.3em;
+}
+
+#meta-2 nav {
+    padding: 4px;    
+    border: 2px solid #fcfffb;
+}
+
+/* Tables */
+table {
+    /* background-color: #000600 !important; */
+    /* color: #fcfffb !important; */
+    /* border-collapse: collapse; */
+    /* border: 2px solid #fcfffb; */
+}
+
+th,
+td {
+    /* border: 2px solid #fcfffb; */
+    /* padding: 4px; */
+}
+
+/* Footer */
+footer,
+.site-footer {
+    /* background-color: #1f45ac !important; */
+    /* color: #fcfffb !important; */
+    /* padding: 10px; */
+    /* border-top: 2px solid #fcfffb; */
+    /* font-size: 0.9em; */
+}
+
+/* Inputs */
+.search-field {
+    background-color: #000060 !important;
+    color: #fcfffb !important;
+    font-family: "Amiga Topaz", monospace !important;
+    font-size: 1.3em !important;
+    border: 2px solid #fcfffb !important;
+    padding: 6px !important;
+}
+
+input.search-field::placeholder {
+    color: #fe870b !important;
+}
+
+select {
+    font-family: "Amiga Topaz", monospace !important;
+    font-size: 1.3em !important;
+}
+
+/* Scrollbar (Chrome/WebKit only) */
+::-webkit-scrollbar {
+    width: 24px;
+}
+::-webkit-scrollbar-track {
+    background: #000600;
+    border: 2px solid #fcfffb;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #fcfffb;
+    border: 0px solid #fe870b;
+}
+}
