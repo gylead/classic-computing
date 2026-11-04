@@ -377,8 +377,8 @@ select:is(#cat, #archives-dropdown-2)::picker(select)::-webkit-scrollbar-button:
 }
 
 /* Kalender (My Calendar plugin, widget "Kalender").
-   Palette: black #000600 background, white #fcfffb text,
-   blue #1f45ac and orange #fe870b for highlights. */
+   Palette: blue #1f45ac background, white #fcfffb text,
+   black #000600 and orange #fe870b for highlights. */
 .content-sidebar aside .widget-title {
     color: #fe870b !important;
     font-size: 1.4em !important;
@@ -389,43 +389,43 @@ select:is(#cat, #archives-dropdown-2)::picker(select)::-webkit-scrollbar-button:
 .my-calendar-modal,
 .my-calendar-modal-overlay,
 .mc-event-list {
-    --primary-dark: #000600 !important;
+    --primary-dark: #1f45ac !important;
     --primary-light: #fcfffb !important;
     --secondary-light: #fcfffb !important;
-    --secondary-dark: #000600 !important;
-    --highlight-dark: #1f45ac !important;
+    --secondary-dark: #1f45ac !important;
+    --highlight-dark: #000600 !important;
     --highlight-light: #fcfffb !important;
     --close-button: #fe870b !important;
     --search-highlight-bg: #fe870b !important;
-    --main-background: #000600 !important;
+    --main-background: #1f45ac !important;
     --main-color: #fcfffb !important;
-    --navbar-background: #000600 !important;
-    --nav-button-bg: #1f45ac !important;
+    --navbar-background: #1f45ac !important;
+    --nav-button-bg: #000600 !important;
     --nav-button-color: #fcfffb !important;
     --nav-button-border: #fcfffb !important;
     --nav-input-border: #fcfffb !important;
-    --nav-input-background: #000600 !important;
+    --nav-input-background: #1f45ac !important;
     --nav-input-color: #fcfffb !important;
     --grid-cell-border: #fcfffb !important;
     --grid-header-border: #fcfffb !important;
     --grid-header-color: #fe870b !important;
     --grid-weekend-color: #fcfffb !important;
-    --grid-header-bg: #000600 !important;
-    --grid-weekend-bg: #000600 !important;
-    --grid-cell-background: #000600 !important;
+    --grid-header-bg: #1f45ac !important;
+    --grid-weekend-bg: #1f45ac !important;
+    --grid-cell-background: #1f45ac !important;
     --current-day-border: #fe870b !important;
     --current-day-color: #fcfffb !important;
-    --current-day-bg: #1f45ac !important;
+    --current-day-bg: #000600 !important;
     --date-has-events-bg: #fe870b !important;
     --date-has-events-color: #000600 !important;
     --list-preset-border-color: #fcfffb !important;
-    --list-preset-stripe-background: #1f45ac !important;
+    --list-preset-stripe-background: #000600 !important;
     --list-preset-date-badge-background: #fe870b !important;
     --list-preset-date-badge-color: #000600 !important;
-    --list-preset-background: #000600 !important;
-    --category-mc_general: #1f45ac !important;
+    --list-preset-background: #1f45ac !important;
+    --category-mc_general: #000600 !important;
     --category-mc_vzekc-ev-veranstaltungen: #fe870b !important;
-    --category-mc_andere-veranstalter: #1f45ac !important;
+    --category-mc_andere-veranstalter: #000600 !important;
     --category-mc_kostenpflichtig: #fe870b !important;
 }
 
@@ -434,7 +434,7 @@ select:is(#cat, #archives-dropdown-2)::picker(select)::-webkit-scrollbar-button:
 .mc-main table,
 .mc-main th,
 .mc-main td {
-    background: #000600 !important;
+    background: #1f45ac !important;
     color: #fcfffb !important;
     border-color: #fcfffb !important;
     font-family: "Amiga Topaz", monospace !important;
@@ -472,7 +472,7 @@ select:is(#cat, #archives-dropdown-2)::picker(select)::-webkit-scrollbar-button:
 /* title is plain text (not a menu): no border; the span inherits the heading size */
 .mc-main .heading,
 .mc-main .heading span {
-    background: #000600 !important;
+    background: #1f45ac !important;
     color: #fcfffb !important;
     border: 0 !important;
     outline: 0 !important;
@@ -494,7 +494,7 @@ select:is(#cat, #archives-dropdown-2)::picker(select)::-webkit-scrollbar-button:
 /* days outside the shown month: blue */
 .mc-main td.nextmonth,
 .mc-main td.prevmonth {
-    background: #1f45ac !important;
+    background: #000600 !important;
 }
 
 /* days with events: orange */
@@ -506,7 +506,7 @@ select:is(#cat, #archives-dropdown-2)::picker(select)::-webkit-scrollbar-button:
 
 /* today (also when it has events): blue with orange frame, after the rule above */
 .mc-main td.current-day {
-    background: #1f45ac !important;
+    background: #000600 !important;
     color: #fcfffb !important;
     outline: 2px solid #fe870b;
     outline-offset: -2px;
@@ -525,7 +525,7 @@ select:is(#cat, #archives-dropdown-2)::picker(select)::-webkit-scrollbar-button:
 .mc-main.mc-main .event-title,
 .mc-main.mc-main .event-title a,
 .mc-main.mc-main .event-title button {
-    background: #1f45ac !important;
+    background: #000600 !important;
     color: #fcfffb !important;
 }
 .mc-main.mc-main .event-title a:hover,
@@ -541,7 +541,7 @@ select:is(#cat, #archives-dropdown-2)::picker(select)::-webkit-scrollbar-button:
 .mc-main .mc-navigation a,
 .mc-main input,
 .mc-main select {
-    background: #1f45ac !important;
+    background: #000600 !important;
     color: #fcfffb !important;
     border: 2px solid #fcfffb !important;
     font-family: "Amiga Topaz", monospace !important;
@@ -556,7 +556,7 @@ select:is(#cat, #archives-dropdown-2)::picker(select)::-webkit-scrollbar-button:
 .my-calendar-modal,
 .my-calendar-modal .mc-modal-content,
 .my-calendar-modal .mc-modal-content * {
-    background: #000600 !important;
+    background: #1f45ac !important;
     color: #fcfffb !important;
     border-color: #fcfffb !important;
     font-family: "Amiga Topaz", monospace !important;
@@ -567,7 +567,7 @@ select:is(#cat, #archives-dropdown-2)::picker(select)::-webkit-scrollbar-button:
 .my-calendar-modal.my-calendar-modal.my-calendar-modal #modal-title,
 .my-calendar-modal.my-calendar-modal .mc-modal-title-container,
 .my-calendar-modal.my-calendar-modal .event-title {
-    background: #1f45ac !important;
+    background: #000600 !important;
     color: #fcfffb !important;
 }
 .my-calendar-modal button.close,
@@ -577,4 +577,18 @@ select:is(#cat, #archives-dropdown-2)::picker(select)::-webkit-scrollbar-button:
 }
 .my-calendar-modal a {
     color: #fe870b !important;
+}
+
+/* no double border: only the widget's own white border remains */
+.mc-main table {
+    border: 0 !important;
+}
+.mc-main tr > :first-child {
+    border-left: 0 !important;
+}
+.mc-main tr > :last-child {
+    border-right: 0 !important;
+}
+.mc-main tbody tr:last-child > * {
+    border-bottom: 0 !important;
 }
