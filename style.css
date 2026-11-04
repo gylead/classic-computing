@@ -595,3 +595,48 @@ select:is(#cat, #archives-dropdown-2)::picker(select)::-webkit-scrollbar-button:
 .mc-main tbody tr:last-child > * {
     border-bottom: 0 !important;
 }
+
+/* Left column: search, Spenden and Homepage-Funktionen as wide as the main menu.
+   #secondary is inset by 30px on both sides; the menu cancels that with a
+   negative margin, so do the same for the widget area. */
+#primary-sidebar {
+    margin-left: -30px !important;
+    margin-right: -30px !important;
+}
+
+#search-2 .search-field {
+    box-sizing: border-box;
+    width: 100% !important;
+}
+#search-2 label {
+    display: block;
+}
+
+/* Spenden button: black background (image stored in the gylead/images repo) */
+#text-2 {
+    background: #000600 !important;
+    border: 2px solid #fcfffb !important;
+    box-sizing: border-box;
+    padding: 4px;
+    text-align: center;
+}
+#text-2 img {
+    content: url("https://gylead.github.io/images/classic-computing.de/spendenbutton.png");
+    max-width: 100%;
+    height: auto;
+}
+
+/* Homepage-Funktionen: title and the 4 links in one box */
+#meta-2 {
+    background: #000600 !important;
+    border: 2px solid #fcfffb !important;
+    box-sizing: border-box;
+    padding: 4px;
+}
+#meta-2 nav {
+    border: 0 !important;
+    padding: 0 !important;
+}
+#meta-2 .widget-title {
+    margin-top: 0;
+}
