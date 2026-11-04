@@ -381,6 +381,7 @@ select:is(#cat, #archives-dropdown-2)::picker(select)::-webkit-scrollbar-button:
    blue #1f45ac and orange #fe870b for highlights. */
 .content-sidebar aside .widget-title {
     color: #fe870b !important;
+    font-size: 1.4em !important;
 }
 
 .mc-main,
@@ -468,17 +469,22 @@ select:is(#cat, #archives-dropdown-2)::picker(select)::-webkit-scrollbar-button:
     overflow: hidden;
 }
 
-/* title is plain text (not a menu): no border */
+/* title is plain text (not a menu): no border; the span inherits the heading size */
 .mc-main .heading,
 .mc-main .heading span {
     background: #000600 !important;
     color: #fcfffb !important;
-    font-size: 0.9em !important;
     border: 0 !important;
     outline: 0 !important;
     box-shadow: none !important;
     margin: 0 !important;
     padding: 2px 0 !important;
+}
+.mc-main .heading {
+    font-size: 1.2em !important;
+}
+.mc-main .heading span {
+    font-size: inherit !important;
 }
 
 .mc-main th {
