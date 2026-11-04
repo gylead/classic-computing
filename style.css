@@ -276,27 +276,41 @@ select#cat option:checked {
     color: #000600 !important;
 }
 
+/* Scrollbar of the open menu: same style as the page scrollbars below */
 select#cat::picker(select)::-webkit-scrollbar {
     width: 24px;
+    height: 24px;
 }
-select#cat::picker(select)::-webkit-scrollbar-track {
+select#cat::picker(select)::-webkit-scrollbar-track:vertical {
+    background: linear-gradient(to right, #fcfffb 0 2px, #1f45ac 2px calc(100% - 2px), #fcfffb calc(100% - 2px));
+}
+select#cat::picker(select)::-webkit-scrollbar-track:horizontal {
+    background: linear-gradient(to bottom, #fcfffb 0 2px, #1f45ac 2px calc(100% - 2px), #fcfffb calc(100% - 2px));
+}
+select#cat::picker(select)::-webkit-scrollbar-thumb:vertical {
+    background: linear-gradient(to right, #fcfffb 0 2px, #1f45ac 2px 5px, #fcfffb 5px calc(100% - 5px), #1f45ac calc(100% - 5px) calc(100% - 2px), #fcfffb calc(100% - 2px));
+    background-clip: padding-box;
+    border: solid transparent;
+    border-width: 3px 0;
+}
+select#cat::picker(select)::-webkit-scrollbar-thumb:horizontal {
+    background: linear-gradient(to bottom, #fcfffb 0 2px, #1f45ac 2px 5px, #fcfffb 5px calc(100% - 5px), #1f45ac calc(100% - 5px) calc(100% - 2px), #fcfffb calc(100% - 2px));
+    background-clip: padding-box;
+    border: solid transparent;
+    border-width: 0 3px;
+}
+select#cat::picker(select)::-webkit-scrollbar-corner {
     background: #1f45ac;
-    border: 2px solid #fcfffb;
 }
-/* white bar with a blue border on the blue track */
-select#cat::picker(select)::-webkit-scrollbar-thumb {
-    background: #fcfffb;
-    border: 3px solid #1f45ac;
-}
-/* White arrow buttons with a black arrow */
-select#cat::picker(select)::-webkit-scrollbar-button {
+select#cat::picker(select)::-webkit-scrollbar-button:single-button {
+    display: block;
+    width: 24px;
+    height: 24px;
     background-color: #fcfffb;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 16px 16px;
     border: 2px solid #fcfffb;
-    height: 24px;
-    width: 24px;
 }
 select#cat::picker(select)::-webkit-scrollbar-button:single-button:vertical:decrement {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10' shape-rendering='crispEdges'%3E%3Cpath d='M5 2L9 8H1z' fill='%23000600'/%3E%3C/svg%3E");
@@ -304,20 +318,37 @@ select#cat::picker(select)::-webkit-scrollbar-button:single-button:vertical:decr
 select#cat::picker(select)::-webkit-scrollbar-button:single-button:vertical:increment {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10' shape-rendering='crispEdges'%3E%3Cpath d='M5 8L9 2H1z' fill='%23000600'/%3E%3C/svg%3E");
 }
+select#cat::picker(select)::-webkit-scrollbar-button:single-button:horizontal:decrement {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10' shape-rendering='crispEdges'%3E%3Cpath d='M2 5L8 1V9z' fill='%23000600'/%3E%3C/svg%3E");
+}
+select#cat::picker(select)::-webkit-scrollbar-button:single-button:horizontal:increment {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10' shape-rendering='crispEdges'%3E%3Cpath d='M8 5L2 1V9z' fill='%23000600'/%3E%3C/svg%3E");
+}
 
-/* Scrollbars (Chrome/WebKit only): white bar with blue border on a blue track,
-   white arrow buttons with black arrows. Same look as the dropdown above. */
+/* Scrollbars (Chrome/WebKit only): white frame (2px), blue gap (3px) inside it,
+   white bar, on a blue track; white arrow buttons with black arrows.
+   Drawn with stripes so the layout does not depend on border handling. */
 ::-webkit-scrollbar {
     width: 24px;
     height: 24px;
 }
-::-webkit-scrollbar-track {
-    background: #1f45ac;
-    border: 2px solid #fcfffb;
+::-webkit-scrollbar-track:vertical {
+    background: linear-gradient(to right, #fcfffb 0 2px, #1f45ac 2px calc(100% - 2px), #fcfffb calc(100% - 2px));
 }
-::-webkit-scrollbar-thumb {
-    background: #fcfffb;
-    border: 3px solid #1f45ac;
+::-webkit-scrollbar-track:horizontal {
+    background: linear-gradient(to bottom, #fcfffb 0 2px, #1f45ac 2px calc(100% - 2px), #fcfffb calc(100% - 2px));
+}
+::-webkit-scrollbar-thumb:vertical {
+    background: linear-gradient(to right, #fcfffb 0 2px, #1f45ac 2px 5px, #fcfffb 5px calc(100% - 5px), #1f45ac calc(100% - 5px) calc(100% - 2px), #fcfffb calc(100% - 2px));
+    background-clip: padding-box;
+    border: solid transparent;
+    border-width: 3px 0;
+}
+::-webkit-scrollbar-thumb:horizontal {
+    background: linear-gradient(to bottom, #fcfffb 0 2px, #1f45ac 2px 5px, #fcfffb 5px calc(100% - 5px), #1f45ac calc(100% - 5px) calc(100% - 2px), #fcfffb calc(100% - 2px));
+    background-clip: padding-box;
+    border: solid transparent;
+    border-width: 0 3px;
 }
 ::-webkit-scrollbar-corner {
     background: #1f45ac;
