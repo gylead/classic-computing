@@ -305,15 +305,42 @@ select#cat::picker(select)::-webkit-scrollbar-button:single-button:vertical:incr
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10' shape-rendering='crispEdges'%3E%3Cpath d='M5 8L9 2H1z' fill='%23000600'/%3E%3C/svg%3E");
 }
 
-/* Scrollbar (Chrome/WebKit only) */
+/* Scrollbars (Chrome/WebKit only): white bar with blue border on a blue track,
+   white arrow buttons with black arrows. Same look as the dropdown above. */
 ::-webkit-scrollbar {
     width: 24px;
+    height: 24px;
 }
 ::-webkit-scrollbar-track {
-    background: #000600;
-    border: 2px solid #fcfffb;
+    background: #1f45ac;
+    border: 0;
 }
 ::-webkit-scrollbar-thumb {
+    background: #fcfffb;
+    border: 3px solid #1f45ac;
+}
+::-webkit-scrollbar-corner {
+    background: #1f45ac;
+}
+::-webkit-scrollbar-button:single-button {
+    display: block;
+    width: 24px;
+    height: 24px;
     background-color: #fcfffb;
-    border: 0px solid #fe870b;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px 16px;
+    border: 2px solid #1f45ac;
+}
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10' shape-rendering='crispEdges'%3E%3Cpath d='M5 2L9 8H1z' fill='%23000600'/%3E%3C/svg%3E");
+}
+::-webkit-scrollbar-button:single-button:vertical:increment {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10' shape-rendering='crispEdges'%3E%3Cpath d='M5 8L9 2H1z' fill='%23000600'/%3E%3C/svg%3E");
+}
+::-webkit-scrollbar-button:single-button:horizontal:decrement {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10' shape-rendering='crispEdges'%3E%3Cpath d='M2 5L8 1V9z' fill='%23000600'/%3E%3C/svg%3E");
+}
+::-webkit-scrollbar-button:single-button:horizontal:increment {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10' shape-rendering='crispEdges'%3E%3Cpath d='M8 5L2 1V9z' fill='%23000600'/%3E%3C/svg%3E");
 }
