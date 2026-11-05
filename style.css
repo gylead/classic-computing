@@ -222,7 +222,7 @@ footer,
 
 /* Inputs */
 .search-field {
-    background-color: #000060 !important;
+    background-color: #000600 !important;
     color: #fcfffb !important;
     font-family: "Amiga Topaz", monospace !important;
     font-size: 1.3em !important;
@@ -640,4 +640,81 @@ select:is(#cat, #archives-dropdown-2)::picker(select)::-webkit-scrollbar-button:
 #meta-2 .widget-title {
     margin-top: 0;
     font-size: 19.6px !important; /* same size as the other orange box titles */
+}
+
+/* Search results and other list pages (archive, category, tag).
+   The home page gets its 40px margin from <body class="page">; give every page one. */
+body {
+    margin: 40px;
+    color: #fcfffb;
+}
+
+.page-header,
+.page-title,
+.archive-header,
+.archive-title,
+.archive-description {
+    background: transparent !important;
+    color: #fcfffb !important;
+}
+
+article.hentry,
+.hentry .entry-header,
+.hentry .entry-summary,
+.hentry .entry-content,
+.hentry .entry-meta,
+.hentry footer.entry-meta {
+    background: transparent !important;
+    color: #fcfffb !important;
+}
+
+.hentry {
+    border-color: #fcfffb !important;
+}
+
+.hentry .entry-title,
+.hentry .entry-title a {
+    background: transparent !important;
+    color: #fcfffb !important;
+}
+.hentry .entry-title a:hover,
+.hentry .entry-title a:focus {
+    color: #fe870b !important;
+}
+
+.hentry .entry-meta a,
+.hentry .cat-links a,
+.hentry .comments-link a,
+.hentry .entry-summary a,
+.hentry .more-link {
+    background: transparent !important;
+    color: #fe870b !important;
+}
+
+.hentry .entry-meta::before,
+.hentry .entry-meta a::before,
+.hentry .entry-date::before,
+.hentry .byline::before,
+.hentry .comments-link::before {
+    color: #fcfffb !important;
+}
+
+/* tags: orange chips with black text */
+.hentry .tag-links a {
+    background: #fe870b !important;
+    color: #000600 !important;
+}
+.hentry .tag-links a::before {
+    border-right-color: #fe870b !important;
+}
+.hentry .tag-links a::after {
+    background: #000600 !important;
+}
+
+/* page navigation: black bar, orange marker on the current page */
+.paging-navigation .page-numbers.current {
+    border-top-color: #fe870b !important;
+}
+.paging-navigation a {
+    color: #fcfffb !important;
 }
