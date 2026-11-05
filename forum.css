@@ -264,3 +264,18 @@ html:not(.touch) .button:hover *,
 .button.buttonPrimary * {
     color: #000600 !important;
 }
+
+/* Dialogs (e.g. the "Filter" dialog of a board): white title bar with black text,
+   thin black border. The forum's own CSS sets the title bar to a hard-coded yellow. */
+.dialogContainer {
+    border: 2px solid #000600 !important;
+}
+.dialogContainer > header {
+    background-color: #fcfffb !important;
+    color: #000600 !important;
+}
+.dialogContainer > header .dialogTitle,
+.dialogContainer > header .dialogCloseButton,
+.dialogContainer > header .dialogCloseButton * {
+    color: #000600 !important;
+}
