@@ -775,6 +775,13 @@ a.url {
 label {
     color: #fcfffb !important;
 }
+.comment-reply-title,
+.comments-title,
+#reply-title,
+.post-navigation,
+.post-navigation a {
+    font-family: "Amiga Topaz", monospace !important;
+}
 .required {
     color: #fe870b !important;
 }
