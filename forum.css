@@ -241,7 +241,11 @@ a.userLink strong,
 
 /* Header image: same style as on www.classic-computing.de, with the word "Forum".
    Embedded as data: URI (source: forum-header.png in the gylead/images repo),
-   because the forum's Content-Security-Policy blocks images from other hosts. */
+   because the forum's Content-Security-Policy blocks images from other hosts.
+   LICENCE NOTE: the embedded image is a modified version of the header of
+   www.classic-computing.de and is NOT under this file's MIT licence, but under
+   CC BY-NC-SA 3.0 DE (attribution, non-commercial, share-alike).
+   See https://github.com/gylead/images/blob/main/LICENSE.md */
 #pageHeaderContainer {
     background: #1f45ac !important;
 }

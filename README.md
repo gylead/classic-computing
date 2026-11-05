@@ -40,7 +40,12 @@ Keep the two styles separate. If the www style is applied to the whole domain
 
 ## Licence
 
-The CSS files are under the [MIT](LICENSE) licence.
+The CSS code is under the [MIT](LICENSE) licence, with one exception:
+
+- The header image embedded in `forum.css` (base64 data URI) is a modified version of the header of
+  classic-computing.de. It is under [CC BY-NC-SA 3.0 DE](https://creativecommons.org/licenses/by-nc-sa/3.0/de/)
+  (attribution, non-commercial, share-alike), like the other graphics on that site.
+  Details: [gylead/images LICENSE.md](https://github.com/gylead/images/blob/main/LICENSE.md).
 
 The font **Amiga Topaz** (loaded from the images repository) is by
 [Patrick H. Lauke](https://fontstruct.com/fontstructions/show/675155) and licensed under
