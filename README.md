@@ -40,4 +40,8 @@ Keep the two styles separate. If the www style is applied to the whole domain
 
 ## Licence
 
-[MIT](LICENSE)
+The CSS files are under the [MIT](LICENSE) licence.
+
+The font **Amiga Topaz** (loaded from the images repository) is by
+[Patrick H. Lauke](https://fontstruct.com/fontstructions/show/675155) and licensed under
+[CC BY 3.0](http://creativecommons.org/licenses/by/3.0/).
