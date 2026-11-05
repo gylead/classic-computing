@@ -864,3 +864,24 @@ a.page-numbers.next {
     color: #fcfffb !important;
     text-decoration: underline !important;
 }
+
+/* Search field: autocomplete suggestions.
+   Chrome's suggestion list itself is native UI and cannot be styled by CSS
+   (neither font nor colors). color-scheme: dark at least renders it dark.
+   The preview shown in the field while hovering a suggestion is styled via
+   :-webkit-autofill. */
+.search-field {
+    color-scheme: dark;
+}
+.search-field:-webkit-autofill,
+.search-field:-webkit-autofill:hover,
+.search-field:-webkit-autofill:focus,
+.search-field:-webkit-autofill:active {
+    -webkit-text-fill-color: #fcfffb !important;
+    caret-color: #fcfffb;
+    -webkit-box-shadow: 0 0 0 1000px #000600 inset !important;
+    box-shadow: 0 0 0 1000px #000600 inset !important;
+    font-family: "Amiga Topaz", monospace !important;
+    font-size: 1.3em !important;
+    transition: background-color 600000s 0s, color 600000s 0s;
+}
