@@ -279,3 +279,15 @@ html:not(.touch) .button:hover *,
 .dialogContainer > header .dialogCloseButton * {
     color: #000600 !important;
 }
+
+/* Topic titles in thread lists: white (orange only on hover) to reduce the amount of orange */
+a.messageGroupLink,
+a.wbbTopicLink {
+    color: #fcfffb !important;
+}
+a.messageGroupLink:hover,
+a.messageGroupLink:focus,
+a.wbbTopicLink:hover,
+a.wbbTopicLink:focus {
+    color: #fe870b !important;
+}
