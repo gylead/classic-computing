@@ -34,11 +34,11 @@ html[data-color-scheme] {
     --wcfTextShadowDark: none !important;
     --wcfTextShadowLight: none !important;
 
-    /* header: white logo band, black menu bar */
-    --wcfHeaderBackground: #fcfffb !important;
-    --wcfHeaderText: #000600 !important;
-    --wcfHeaderLink: #000600 !important;
-    --wcfHeaderLinkActive: #fe870b !important;
+    /* header: blue band with the header image, black menu bar */
+    --wcfHeaderBackground: #1f45ac !important;
+    --wcfHeaderText: #fcfffb !important;
+    --wcfHeaderLink: #fe870b !important;
+    --wcfHeaderLinkActive: #fcfffb !important;
     --wcfHeaderMenuBackground: #000600 !important;
     --wcfHeaderMenuLinkBackground: #000600 !important;
     --wcfHeaderMenuLinkBackgroundActive: #fe870b !important;
@@ -88,7 +88,7 @@ html[data-color-scheme] {
     --wcfSidebarHeadlineLinkActive: #fcfffb !important;
 
     /* breadcrumb navigation */
-    --wcfNavigationBackground: #000600 !important;
+    --wcfNavigationBackground: #1f45ac !important;
     --wcfNavigationText: #fcfffb !important;
     --wcfNavigationLink: #fcfffb !important;
     --wcfNavigationLinkActive: #fe870b !important;
@@ -237,4 +237,17 @@ a.userLink strong,
 .boxMenuLinkOutstandingItems {
     background: #fe870b !important;
     color: #000600 !important;
+}
+
+/* Header image: same style as on www.classic-computing.de, with the word "Forum".
+   Embedded as data: URI (source: forum-header.png in the gylead/images repo),
+   because the forum's Content-Security-Policy blocks images from other hosts. */
+#pageHeaderContainer {
+    background: #1f45ac !important;
+}
+.pageHeaderLogoLarge {
+    content: url("data:image/png;base64,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");
+    width: 1260px !important;
+    max-width: 100%;
+    height: auto !important;
 }
