@@ -1,10 +1,3 @@
-/* Ziel: Absatzabstand in Beiträgen erhöhen */
-.messageText p {
-    margin-top: 0em !important;
-    margin-bottom: 0.5em !important;
-    line-height: 1.5 !important;
-}
-
 /* ==UserStyle==
 @name         AmigaOS 1.x Theme for classic-computing.de
 @namespace    userstyles

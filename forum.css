@@ -1,0 +1,240 @@
+/* ==UserStyle==
+@name         AmigaOS 1.x Theme for forum.classic-computing.de
+@namespace    userstyles
+@version      1.0.0
+@description  Retro Amiga 1.x UI styling for the WoltLab forum
+@match        *://forum.classic-computing.de/*
+==/UserStyle== */
+
+/* Palette (only these four colors):
+   blue   #1f45ac  (page background)
+   white  #fcfffb  (text)
+   orange #fe870b  (links, highlights)
+   black  #000600  (boxes, bars)
+   WoltLab Suite 6.x is themed through --wcf… variables, so most of the look
+   comes from overriding them on <html>. */
+
+@font-face {
+    font-family: 'Amiga Topaz';
+    src: url('https://gylead.github.io/images/classic-computing.de/amiga-topaz.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+html[data-color-scheme] {
+    /* font and shape: Topaz, no rounded corners, no shadows */
+    --wcfFontFamily: "Amiga Topaz", monospace !important;
+    --wcfFontFamilyMonospace: "Amiga Topaz", monospace !important;
+    --wcfBorderRadius: 0 !important;
+    --wcfBorderRadiusContainer: 0 !important;
+    --wcfBoxShadow: none !important;
+    --wcfBoxShadowCard: none !important;
+    --wcfBoxShadowImageButton: none !important;
+    --wcfTextShadowDark: none !important;
+    --wcfTextShadowLight: none !important;
+
+    /* header: white logo band, black menu bar */
+    --wcfHeaderBackground: #fcfffb !important;
+    --wcfHeaderText: #000600 !important;
+    --wcfHeaderLink: #000600 !important;
+    --wcfHeaderLinkActive: #fe870b !important;
+    --wcfHeaderMenuBackground: #000600 !important;
+    --wcfHeaderMenuLinkBackground: #000600 !important;
+    --wcfHeaderMenuLinkBackgroundActive: #fe870b !important;
+    --wcfHeaderMenuLink: #fcfffb !important;
+    --wcfHeaderMenuLinkActive: #000600 !important;
+    --wcfHeaderMenuDropdownBackground: #000600 !important;
+    --wcfHeaderMenuDropdownBackgroundActive: #fe870b !important;
+    --wcfHeaderMenuDropdownLink: #fcfffb !important;
+    --wcfHeaderMenuDropdownLinkActive: #000600 !important;
+    --wcfHeaderMenuDropdownBorder: #fcfffb !important;
+    --wcfHeaderSearchBoxBackground: #000600 !important;
+    --wcfHeaderSearchBoxBackgroundActive: #000600 !important;
+    --wcfHeaderSearchBoxText: #fcfffb !important;
+    --wcfHeaderSearchBoxTextActive: #fcfffb !important;
+    --wcfHeaderSearchBoxPlaceholder: #fe870b !important;
+    --wcfHeaderSearchBoxPlaceholderActive: #fe870b !important;
+    --wcfPageThemeColor: #1f45ac !important;
+
+    /* content boxes */
+    --wcfContentBackground: #000600 !important;
+    --wcfContentContainerBackground: #000600 !important;
+    --wcfContentContainerBorder: #fcfffb !important;
+    --wcfContentBorder: #fcfffb !important;
+    --wcfContentBorderInner: #fcfffb !important;
+    --wcfContentHeadlineBorder: #fcfffb !important;
+    --wcfContentHeadlineText: #fe870b !important;
+    --wcfContentHeadlineLink: #fe870b !important;
+    --wcfContentHeadlineLinkActive: #fcfffb !important;
+    --wcfContentText: #fcfffb !important;
+    --wcfContentLink: #fe870b !important;
+    --wcfContentLinkActive: #fcfffb !important;
+    --wcfContentDimmedText: #fcfffb !important;
+    --wcfContentDimmedLink: #fcfffb !important;
+    --wcfContentDimmedLinkActive: #fe870b !important;
+
+    /* sidebar */
+    --wcfSidebarBackground: #000600 !important;
+    --wcfSidebarBorder: #fcfffb !important;
+    --wcfSidebarText: #fcfffb !important;
+    --wcfSidebarLink: #fe870b !important;
+    --wcfSidebarLinkActive: #fcfffb !important;
+    --wcfSidebarDimmedText: #fcfffb !important;
+    --wcfSidebarDimmedLink: #fcfffb !important;
+    --wcfSidebarDimmedLinkActive: #fe870b !important;
+    --wcfSidebarHeadlineText: #fe870b !important;
+    --wcfSidebarHeadlineLink: #fe870b !important;
+    --wcfSidebarHeadlineLinkActive: #fcfffb !important;
+
+    /* breadcrumb navigation */
+    --wcfNavigationBackground: #000600 !important;
+    --wcfNavigationText: #fcfffb !important;
+    --wcfNavigationLink: #fcfffb !important;
+    --wcfNavigationLinkActive: #fe870b !important;
+
+    /* buttons: blue, orange when active; primary = orange */
+    --wcfButtonBackground: #1f45ac !important;
+    --wcfButtonBackgroundActive: #fe870b !important;
+    --wcfButtonText: #fcfffb !important;
+    --wcfButtonTextActive: #000600 !important;
+    --wcfButtonDisabledBackground: #000600 !important;
+    --wcfButtonDisabledText: #fcfffb !important;
+    --wcfButtonPrimaryBackground: #fe870b !important;
+    --wcfButtonPrimaryBackgroundActive: #fcfffb !important;
+    --wcfButtonPrimaryText: #000600 !important;
+    --wcfButtonPrimaryTextActive: #000600 !important;
+    --wcfEditorButtonBackground: #1f45ac !important;
+    --wcfEditorButtonBackgroundActive: #fe870b !important;
+    --wcfEditorButtonText: #fcfffb !important;
+    --wcfEditorButtonTextActive: #000600 !important;
+    --wcfEditorButtonTextDisabled: #fcfffb !important;
+    --wcfEditorTableBorder: #fcfffb !important;
+    --wcfToggleButtonBackground: #1f45ac !important;
+    --wcfToggleButtonBackgroundActive: #fe870b !important;
+    --wcfToggleButtonSliderBackground: #fcfffb !important;
+    --wcfToggleButtonSliderBackgroundActive: #fcfffb !important;
+
+    /* form fields: black with white frame, orange when active */
+    --wcfInputBackground: #000600 !important;
+    --wcfInputBackgroundActive: #000600 !important;
+    --wcfInputBorder: #fcfffb !important;
+    --wcfInputBorderActive: #fe870b !important;
+    --wcfInputText: #fcfffb !important;
+    --wcfInputTextActive: #fcfffb !important;
+    --wcfInputLabel: #fcfffb !important;
+    --wcfInputPlaceholder: #fe870b !important;
+    --wcfInputPlaceholderActive: #fe870b !important;
+    --wcfInputDisabledBackground: #000600 !important;
+    --wcfInputDisabledBorder: #fcfffb !important;
+    --wcfInputDisabledText: #fcfffb !important;
+
+    /* dropdowns, user menu, tooltips */
+    --wcfDropdownBackground: #000600 !important;
+    --wcfDropdownBackgroundActive: #fe870b !important;
+    --wcfDropdownBorderInner: #fcfffb !important;
+    --wcfDropdownText: #fcfffb !important;
+    --wcfDropdownLink: #fcfffb !important;
+    --wcfDropdownLinkActive: #000600 !important;
+    --wcfUserMenuBackground: #000600 !important;
+    --wcfUserMenuBackgroundActive: #fe870b !important;
+    --wcfUserMenuText: #fcfffb !important;
+    --wcfUserMenuTextActive: #000600 !important;
+    --wcfUserMenuTextDimmed: #fcfffb !important;
+    --wcfUserMenuIndicator: #fe870b !important;
+    --wcfUserMenuBorder: #fcfffb !important;
+    --wcfTooltipBackground: #000600 !important;
+    --wcfTooltipText: #fcfffb !important;
+    --wcfTabularBoxBackgroundActive: #1f45ac !important;
+    --wcfTabularBoxBorderInner: #fcfffb !important;
+    --wcfTabularBoxHeadline: #fe870b !important;
+    --wcfTabularBoxHeadlineActive: #fcfffb !important;
+
+    /* status messages: blue = information, orange = warning/error */
+    --wcfStatusInfoBackground: #1f45ac !important;
+    --wcfStatusInfoBorder: #fcfffb !important;
+    --wcfStatusInfoText: #fcfffb !important;
+    --wcfStatusInfoLink: #fe870b !important;
+    --wcfStatusInfoLinkActive: #fcfffb !important;
+    --wcfStatusSuccessBackground: #1f45ac !important;
+    --wcfStatusSuccessBorder: #fcfffb !important;
+    --wcfStatusSuccessText: #fcfffb !important;
+    --wcfStatusSuccessLink: #fe870b !important;
+    --wcfStatusSuccessLinkActive: #fcfffb !important;
+    --wcfStatusWarningBackground: #fe870b !important;
+    --wcfStatusWarningBorder: #fcfffb !important;
+    --wcfStatusWarningText: #000600 !important;
+    --wcfStatusWarningLink: #000600 !important;
+    --wcfStatusWarningLinkActive: #fcfffb !important;
+    --wcfStatusErrorBackground: #fe870b !important;
+    --wcfStatusErrorBorder: #fcfffb !important;
+    --wcfStatusErrorText: #000600 !important;
+    --wcfStatusErrorLink: #000600 !important;
+    --wcfStatusErrorLinkActive: #fcfffb !important;
+
+    /* footer */
+    --wcfFooterBackground: #000600 !important;
+    --wcfFooterText: #fcfffb !important;
+    --wcfFooterLink: #fe870b !important;
+    --wcfFooterLinkActive: #fcfffb !important;
+    --wcfFooterHeadlineText: #fe870b !important;
+    --wcfFooterHeadlineLink: #fe870b !important;
+    --wcfFooterHeadlineLinkActive: #fcfffb !important;
+    --wcfFooterBoxBackground: #000600 !important;
+    --wcfFooterBoxText: #fcfffb !important;
+    --wcfFooterBoxLink: #fe870b !important;
+    --wcfFooterBoxLinkActive: #fcfffb !important;
+    --wcfFooterBoxHeadlineText: #fe870b !important;
+    --wcfFooterBoxHeadlineLink: #fe870b !important;
+    --wcfFooterBoxHeadlineLinkActive: #fcfffb !important;
+    --wcfFooterCopyrightBackground: #000600 !important;
+    --wcfFooterCopyrightText: #fcfffb !important;
+    --wcfFooterCopyrightLink: #fe870b !important;
+    --wcfFooterCopyrightLinkActive: #fcfffb !important;
+}
+
+html,
+body {
+    background-color: #1f45ac !important;
+    color: #fcfffb;
+    font-family: "Amiga Topaz", monospace !important;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Absatzabstand in Beiträgen (moved here from style.css) */
+.messageText p {
+    margin-top: 0em !important;
+    margin-bottom: 0.5em !important;
+    line-height: 1.5 !important;
+}
+
+/* board categories as black boxes with white frame */
+.wbbBoardNodeContainer {
+    background: #000600;
+    border: 2px solid #fcfffb;
+    margin-bottom: 12px;
+}
+
+/* user names are colored per user group with inline styles (dark green etc.):
+   use the link color instead */
+a.userLink span,
+a.userLink strong,
+.username span {
+    color: inherit !important;
+}
+
+/* colored inline text in posts: orange instead of unreadable dark colors */
+.messageText [style*="color"] {
+    color: #fe870b !important;
+}
+
+/* badges (unread counters): orange with black text instead of red */
+.badge,
+.badge.badgeUpdate,
+.boxMenuLinkOutstandingItems {
+    background: #fe870b !important;
+    color: #000600 !important;
+}
