@@ -853,3 +853,14 @@ a.page-numbers.next {
     background: #fe870b !important;
     border: 2px solid #fcfffb !important;
 }
+
+/* "Wichtige Ankündigungen" (plugin widget): same links as everywhere else */
+.buffercode_fl_widget_info a,
+.buffercode_fl_widget_info a:visited {
+    color: #fe870b !important;
+}
+.buffercode_fl_widget_info a:hover,
+.buffercode_fl_widget_info a:focus {
+    color: #fcfffb !important;
+    text-decoration: underline !important;
+}
