@@ -658,6 +658,12 @@ body {
     color: #fcfffb !important;
 }
 
+.page-title,
+.archive-title {
+    color: #fe870b !important;
+    font-size: 1.4em !important;
+}
+
 article.hentry,
 .hentry .entry-header,
 .hentry .entry-summary,
