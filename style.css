@@ -724,3 +724,125 @@ article.hentry,
 .paging-navigation a {
     color: #fcfffb !important;
 }
+
+/* ===== Sub pages (posts, pages, comments, forms, full calendar) ===== */
+
+/* links: palette orange instead of the theme's red-orange (#cb4b0e) */
+a {
+    color: #fe870b;
+}
+a:hover,
+a:focus {
+    color: #fcfffb;
+}
+
+hr {
+    background: #fcfffb;
+    border: 0;
+    height: 2px;
+}
+
+/* grey meta text -> white */
+time,
+.entry-meta,
+.comment-metadata,
+.comment-metadata a,
+.comment-notes,
+.required-field-message,
+#email-notes,
+.form-allowed-tags,
+.post-navigation .meta-nav,
+.meta-nav {
+    color: #fcfffb !important;
+}
+
+/* comments */
+.comment-author,
+.comment-author .fn,
+.comment-author a,
+.comment-author a.url,
+.vcard a,
+a.url {
+    color: #fe870b !important;
+}
+.comment-reply-link,
+.comment-reply-link::before {
+    color: #fe870b !important;
+}
+.comment-reply-title,
+.comments-title,
+#reply-title,
+label {
+    color: #fcfffb !important;
+}
+.required {
+    color: #fe870b !important;
+}
+
+/* form fields: black with white frame, orange submit button */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea {
+    background: #000600 !important;
+    color: #fcfffb !important;
+    border: 2px solid #fcfffb !important;
+    font-family: "Amiga Topaz", monospace !important;
+    box-sizing: border-box;
+}
+input[type="submit"],
+.submit,
+button[type="submit"] {
+    background: #fe870b !important;
+    color: #000600 !important;
+    border: 2px solid #fcfffb !important;
+    font-family: "Amiga Topaz", monospace !important;
+}
+input[type="submit"]:hover,
+.submit:hover,
+button[type="submit"]:hover {
+    background: #fcfffb !important;
+    color: #000600 !important;
+}
+
+/* inline blue/red text colors set in the page content -> orange */
+[style*="color: #0000ff"], [style*="color:#0000ff"], [style*="color: blue"], [style*="color:blue"],
+[style*="color: rgb(0, 0, 255)"], [style*="color: #ff0000"], [style*="color:#ff0000"],
+[style*="color: red"], [style*="color:red"], [style*="color: rgb(255, 0, 0)"] {
+    color: #fe870b !important;
+}
+
+/* page numbers (e.g. paginated lists): white buttons, orange current page */
+a.page-numbers {
+    background: #fcfffb !important;
+    color: #000600 !important;
+}
+span.page-numbers.current {
+    background: #fe870b !important;
+    color: #000600 !important;
+}
+a.page-numbers.prev,
+a.page-numbers.next {
+    background: transparent !important;
+    color: #fe870b !important;
+}
+.paging-navigation .page-numbers,
+.paging-navigation a.page-numbers {
+    background: transparent !important;
+    color: #fcfffb !important;
+}
+
+/* full calendar page: header/footer panels and category legend */
+.mc-main .my-calendar-header,
+.mc-main .my-calendar-footer,
+.mc-main .mc_bottomnav {
+    background: #000600 !important;
+    color: #fcfffb !important;
+}
+.mc-main .category-color-sample {
+    background: #fe870b !important;
+    border: 2px solid #fcfffb !important;
+}
