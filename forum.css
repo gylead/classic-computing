@@ -251,3 +251,16 @@ a.userLink strong,
     max-width: 100%;
     height: auto !important;
 }
+
+/* Buttons: black text and symbol on hover/focus and on the orange primary buttons.
+   (Needs !important because buttons sit inside <nav> elements, and a
+   "nav a { color … !important }" rule from the www style can reach the forum
+   while that Stylus entry still applies to the whole classic-computing.de domain.) */
+html:not(.touch) .button:hover,
+html:not(.touch) .button:hover *,
+.button:focus-visible,
+.button:focus-visible *,
+.button.buttonPrimary,
+.button.buttonPrimary * {
+    color: #000600 !important;
+}
