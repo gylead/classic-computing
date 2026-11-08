@@ -16,9 +16,10 @@
 
 @font-face {
     font-family: 'Amiga Topaz';
-    src: url('https://gylead.github.io/images/classic-computing.de/amiga-topaz.woff2') format('woff2');
+    src: url('https://gylead.github.io/images/classic-computing.de/topaz-ng-classic.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
+    size-adjust: 85%; /* Topaz NG is wider than the old bitmap-style font; keeps the layout */
 }
 
 html,
