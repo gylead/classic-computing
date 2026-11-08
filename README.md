@@ -33,7 +33,7 @@ Keep the two styles separate. If the www style is applied to the whole domain
 ## Notes
 
 - The dropdown popups use `appearance: base-select` and `::picker(select)`, which need Chrome 135 or newer.
-- The font (Topaz NG Proportional, SIL OFL) and the images are loaded from <https://gylead.github.io/images/>
+- The fonts and the images are loaded from <https://gylead.github.io/images/>
   (repository [gylead/images](https://github.com/gylead/images)). The forum header is embedded
   as a data URI, because the forum's content security policy blocks external images.
 - Chrome's native autocomplete list under the search field cannot be styled with CSS.
@@ -47,9 +47,34 @@ The CSS code is under the [MIT](LICENSE) licence, with one exception:
   (attribution, non-commercial, share-alike), like the other graphics on that site.
   Details: [gylead/images LICENSE.md](https://github.com/gylead/images/blob/main/LICENSE.md).
 
-The default font is **TopazNG Proportional**, a derivative of Topaz NG with proportional character widths.
-For the monospaced original, change the `@font-face` rule at the top of the file to
-`topaz-ng-classic.woff2` and `size-adjust: 85%`.
+## Fonts
 
-The font **Topaz NG** (loaded from the images repository) is by Campbell Barton and licensed under the
-[SIL Open Font License 1.1](https://codeberg.org/ideasman42/font-topaz-ng/src/branch/main/LICENSE).
+Three Topaz fonts are available in [gylead/images](https://github.com/gylead/images). The default is
+the first one. To use another, change the `src` URL (and `size-adjust`) in the `@font-face` rule at the
+top of the Stylus style:
+
+| Font | File | `size-adjust` | Look |
+|------|------|---------------|------|
+| TopazNG Proportional (default) | `topaz-ng-proportional.woff2` | `100%` | smooth, proportional widths, best for reading |
+| TopazNG Classic | `topaz-ng-classic.woff2` | `85%` | smooth, fixed width like the original Topaz |
+| Amiga Topaz (pixel font) | `amiga-topaz.woff2` | remove the line | low-resolution pixel look of the real Amiga |
+
+Example for the pixel font:
+
+```css
+@font-face {
+    font-family: 'Amiga Topaz';
+    src: url('https://gylead.github.io/images/classic-computing.de/amiga-topaz.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+```
+
+Do this in both Stylus styles (www and forum) so they match.
+
+The fonts are credited and licensed as follows:
+
+- **Topaz NG** (Proportional and Classic) by Campbell Barton, under the
+  [SIL Open Font License 1.1](https://codeberg.org/ideasman42/font-topaz-ng/src/branch/main/LICENSE).
+- **Amiga Topaz** (pixel font) by [Patrick H. Lauke](https://fontstruct.com/fontstructions/show/675155),
+  under [CC BY 3.0](http://creativecommons.org/licenses/by/3.0/).
