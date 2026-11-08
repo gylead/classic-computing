@@ -33,7 +33,7 @@ Keep the two styles separate. If the www style is applied to the whole domain
 ## Notes
 
 - The dropdown popups use `appearance: base-select` and `::picker(select)`, which need Chrome 135 or newer.
-- The font (Topaz NG, SIL OFL) and the images are loaded from <https://gylead.github.io/images/>
+- The font (Topaz NG Proportional, SIL OFL) and the images are loaded from <https://gylead.github.io/images/>
   (repository [gylead/images](https://github.com/gylead/images)). The forum header is embedded
   as a data URI, because the forum's content security policy blocks external images.
 - Chrome's native autocomplete list under the search field cannot be styled with CSS.
@@ -46,6 +46,10 @@ The CSS code is under the [MIT](LICENSE) licence, with one exception:
   classic-computing.de. It is under [CC BY-NC-SA 3.0 DE](https://creativecommons.org/licenses/by-nc-sa/3.0/de/)
   (attribution, non-commercial, share-alike), like the other graphics on that site.
   Details: [gylead/images LICENSE.md](https://github.com/gylead/images/blob/main/LICENSE.md).
+
+The default font is **TopazNG Proportional**, a derivative of Topaz NG with proportional character widths.
+For the monospaced original, change the `@font-face` rule at the top of the file to
+`topaz-ng-classic.woff2` and `size-adjust: 85%`.
 
 The font **Topaz NG** (loaded from the images repository) is by Campbell Barton and licensed under the
 [SIL Open Font License 1.1](https://codeberg.org/ideasman42/font-topaz-ng/src/branch/main/LICENSE).
